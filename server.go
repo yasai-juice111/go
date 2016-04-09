@@ -19,11 +19,11 @@ func viewHandler(w http.ResponseWriter, r *http.Request) {
 
   err = tmpl.Execute(w, page)
   if err != nil {
-    panic(err)
+    panic(err);
   }
 }
 
 func main() {
-  http.HandleFunc("/", viewHandler) // hello
-  http.ListenAndServe(":3001", nil)
+  http.HandleFunc("/", viewHandler); // hello
+  http.ListenAndServe(":3001", nil);
 }
